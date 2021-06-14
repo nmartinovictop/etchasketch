@@ -3,10 +3,10 @@
     flex-wrap: wrap;
     flex-direction: row;
     /* margin: 20vw; */
-    height: 100vh;
+    height: 960px;
+    width: 960px;
     align-content: flex-start;
 }
-
 
 
 /* body, html
