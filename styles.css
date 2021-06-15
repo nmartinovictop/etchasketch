@@ -8,7 +8,23 @@
     align-content: flex-start;
 }
 
+.outer-container {
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+}
 
+.button-container {
+    display: flex;
+    align-content: flex-end;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.resize {
+    height: 20px;
+    width: 100px
+}
 /* body, html
 {
   width: 100%;

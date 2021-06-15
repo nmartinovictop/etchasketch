@@ -17,13 +17,21 @@ for (o = 0; o < rows*rows; o++) {
 let divs = document.querySelectorAll('.grid')
 
 
-  const resize = document.querySelector('.resize')
+const resize = document.querySelector('.resize')
+divs.forEach((div) => {
+    div.addEventListener('mouseover', (e) => {
+      console.log(e.currentTarget.style.cssText += 'background: goldenrod');
+    });
+  });
+
 
   resize.addEventListener('click', () => {
       rows = parseInt(prompt("Enter new rows"))
+      
       while (container.firstChild) {
           container.removeChild(container.firstChild)
       }
+      
       cellSize = 960/rows
       cell.style.cssText = `outline: 1px solid black; height: ${cellSize}px; width: ${cellSize}px`
 
@@ -31,16 +39,13 @@ let divs = document.querySelectorAll('.grid')
       for (o = 0; o < rows*rows; o++) {
         container.appendChild(cell.cloneNode())
     }
-    
+
     divs = document.querySelectorAll('.grid')
+    divs.forEach((div) => {
+        div.addEventListener('mouseover', (e) => {
+          console.log(e.currentTarget.style.cssText += 'background: goldenrod');
+        });
+      });
 
   }
    )
-
-   divs.forEach((div) => {
-
-    // and for each one we add a 'click' listener
-    div.addEventListener('mouseover', (e) => {
-      console.log(e.currentTarget.style.cssText += 'background: goldenrod');
-    });
-  });
